@@ -1,8 +1,4 @@
-/* ================================
-   GLOBAL RESET & VARIABLES
-================================ */
-
-/* Reset */
+/* RESET */
 *,
 *::before,
 *::after {
@@ -11,9 +7,8 @@
   box-sizing: border-box;
 }
 
-/* CSS Variables - Orange (Light) Theme */
+/* THEME VARIABLES */
 :root {
-  /* Orange Light Theme (Default) */
   --bg-primary: radial-gradient(circle at top left, #ffedd5, #fff7ed);
   --bg-dark: #fff7ed;
   --color-primary: #f97316;
@@ -26,18 +21,11 @@
   --color-card-bg: rgba(249, 115, 22, 0.08);
   --color-card-border: rgba(249, 115, 22, 0.2);
   --color-shadow: rgba(249, 115, 22, 0.25);
-  
-  /* Additional theme colors */
-  --color-success: #16a34a;
-  --color-warning: #f59e0b;
-  --color-error: #dc2626;
-  --color-info: #0ea5e9;
-  
   --font-main: "Poppins", sans-serif;
   --transition: all 0.3s ease;
 }
 
-/* Green Dark Theme */
+/* DARK THEME */
 body.dark-theme {
   --bg-primary: radial-gradient(circle at top left, #1b1735, #0a0714);
   --bg-dark: #0a0714;
@@ -53,7 +41,7 @@ body.dark-theme {
   --color-shadow: rgba(16, 185, 129, 0.25);
 }
 
-/* Base */
+/* BASE */
 html {
   scroll-behavior: smooth;
 }
@@ -63,27 +51,66 @@ body {
   background: var(--bg-primary);
   color: var(--color-text);
   overflow-x: hidden;
-  min-height: 100vh;
-  transition: var(--transition);
+  padding-top: 80px;
 }
 
-/* Links */
+/* COMMON ELEMENTS */
 a {
   text-decoration: none;
   color: inherit;
-  transition: var(--transition);
 }
 
-/* Lists */
 ul {
   list-style: none;
 }
 
-/* Buttons */
 button {
   font-family: inherit;
-  outline: none;
-  border: none;
   cursor: pointer;
-  transition: var(--transition);
+}
+
+/* ===== GLOBAL FIXES ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+}
+
+/* ===== ADDITIONAL STYLES ===== */
+.secondary-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    color: var(--color-primary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.secondary-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ================= THEME COLORS ================= */
+:root {
+    --blob-gradient: linear-gradient(
+        135deg,
+        #ff6a00,
+        #ff9f45,
+        #ff6a00
+    );
+}
+
+.dark-theme {
+    --blob-gradient: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary)
+    );
 }

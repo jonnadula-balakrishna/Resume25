@@ -1,0 +1,138 @@
+/* ================= SKILLS SECTION ================= */
+.skills {
+    padding: 120px 90px;
+}
+
+.skills-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.skills-header {
+    max-width: 520px;
+    margin-bottom: 50px;
+}
+
+.skills-header h3 {
+    font-size: 14px;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.skills-header h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.skills-header h2 span {
+    color: var(--color-primary);
+}
+
+.skills-header p {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+/* ================= CONCAT GRID ================= */
+.skills-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* CATEGORY CARD */
+.skills-category-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    padding: 22px;
+    transition: 0.3s ease;
+}
+
+/* CONCAT FEEL */
+.skills-category-card.first {
+    border-radius: 16px 16px 6px 6px;
+}
+
+.skills-category-card.last {
+    border-radius: 6px 6px 16px 16px;
+}
+
+.skills-category-card:not(.first):not(.last) {
+    border-radius: 6px;
+}
+
+.skills-category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px var(--color-shadow);
+}
+
+/* TITLE */
+.skills-category-card h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: var(--color-primary);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-card-border);
+}
+
+/* SKILL LIST */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+/* SKILL ITEM */
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--color-card-border);
+}
+
+/* SKILL NAME */
+.skill-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* SKILL LEVEL */
+.skill-level {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* LEVEL COLORS */
+.skill-level.advanced {
+    color: #4ade80;
+}
+
+.skill-level.intermediate {
+    color: #facc15;
+}
+
+.skill-level.basic {
+    color: #f87171;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .skills {
+        padding: 80px 24px;
+    }
+
+    .skills-header h2 {
+        font-size: 28px;
+    }
+
+    .skills-category-grid {
+        grid-template-columns: 1fr;
+    }
+}

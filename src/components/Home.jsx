@@ -1,3 +1,4 @@
+import "../styles/hero.css";
 import React from "react";
 import balakrishna from "../assets/baala-removebg-preview (1).png";
 

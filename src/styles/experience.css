@@ -1,0 +1,221 @@
+/* ================= EXPERIENCE SECTION ================= */
+.experience {
+    padding: 120px 90px;
+    background: var(--bg-dark);
+}
+
+.experience-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.experience-header {
+    max-width: 500px;
+    margin-bottom: 60px;
+}
+
+.experience-header h3 {
+    font-size: 14px;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.experience-header h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.experience-header h2 span {
+    color: var(--color-primary);
+}
+
+.experience-header p {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.7;
+}
+
+/* TIMELINE */
+.experience-timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 30px;
+    border-left: 2px solid var(--color-card-border);
+}
+
+.experience-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* DOT */
+.experience-dot {
+    position: absolute;
+    left: -41px;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--color-primary);
+}
+
+/* CARD */
+.experience-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 16px;
+    padding: 26px;
+    transition: var(--transition);
+}
+
+.experience-card h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.experience-meta {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin-bottom: 14px;
+}
+
+.experience-card ul {
+    padding-left: 18px;
+}
+
+.experience-card li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    color: var(--color-text-muted);
+}
+
+/* HOVER */
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px var(--color-shadow);
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* ---------- Laptop (≤ 1200px) ---------- */
+@media (max-width: 1200px) {
+    .experience {
+        padding: 100px 60px;
+    }
+
+    .experience-header h2 {
+        font-size: 32px;
+    }
+}
+
+/* ---------- Tablet (≤ 992px) ---------- */
+@media (max-width: 992px) {
+    .experience {
+        padding: 80px 40px;
+    }
+
+    .experience-header {
+        max-width: 100%;
+        text-align: start;
+        margin-bottom: 50px;
+    }
+
+    .experience-timeline {
+        margin-left: 10px;
+        padding-left: 24px;
+    }
+
+    .experience-dot {
+        left: -36px;
+    }
+}
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 24px;
+    }
+
+    .experience-header h2 {
+        font-size: 28px;
+    }
+
+    .experience-header p {
+        font-size: 13px;
+    }
+
+    .experience-timeline {
+        margin-left: 0;
+        padding-left: 20px;
+        border-left-width: 1.5px;
+    }
+
+    .experience-dot {
+        width: 12px;
+        height: 12px;
+        left: -32px;
+        top: 22px;
+    }
+
+    .experience-card {
+        padding: 22px;
+    }
+
+    .experience-card h4 {
+        font-size: 16px;
+    }
+
+    .experience-card li {
+        font-size: 13px;
+    }
+}
+
+/* ---------- Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .experience-header h2 {
+        font-size: 24px;
+    }
+
+    .experience-header h3 {
+        font-size: 12px;
+    }
+
+    .experience-header p {
+        font-size: 12px;
+    }
+
+    .experience-timeline {
+        padding-left: 16px;
+    }
+
+    .experience-dot {
+        width: 10px;
+        height: 10px;
+        left: -28px;
+        box-shadow: 0 0 8px var(--color-primary);
+    }
+
+    .experience-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .experience-card h4 {
+        font-size: 15px;
+    }
+
+    .experience-meta {
+        font-size: 12px;
+    }
+
+    .experience-card li {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}

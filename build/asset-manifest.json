@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.877930d7.css",
+    "main.js": "/static/js/main.df9eecb9.js",
+    "static/js/453.02ccfdc9.chunk.js": "/static/js/453.02ccfdc9.chunk.js",
+    "static/media/baala-removebg-preview (1).png": "/static/media/baala-removebg-preview (1).2398078cfead1cf9a9c5.png",
+    "index.html": "/index.html",
+    "main.877930d7.css.map": "/static/css/main.877930d7.css.map",
+    "main.df9eecb9.js.map": "/static/js/main.df9eecb9.js.map",
+    "453.02ccfdc9.chunk.js.map": "/static/js/453.02ccfdc9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.877930d7.css",
+    "static/js/main.df9eecb9.js"
+  ]
+}

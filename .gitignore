@@ -1,16 +1,40 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+=======
+=======
+>>>>>>> Stashed changes
+# ======================
+# Firebase Build & Deployment
+# ======================
+/firebase-debug.log
+/firebase-debug.*.log
+.firebaserc
+>>>>>>> Stashed changes
 
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 
+<<<<<<< Updated upstream
 # testing
 /coverage
+=======
+# Firebase Functions
+/functions/node_modules/
+/functions/.env
+/functions/package-lock.json
+/functions/yarn.lock
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 # production
 /build
 
+<<<<<<< Updated upstream
 # misc
 .DS_Store
 .env.local
@@ -18,6 +42,34 @@
 .env.test.local
 .env.production.local
 
+<<<<<<< Updated upstream
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+=======
+=======
+>>>>>>> Stashed changes
+# ======================
+# Logs
+# ======================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# Environment Files
+# ======================
+/.env.*
+.env
+
+# ======================
+# Node / npm
+# ======================
+node_modules/
+package-lock.json
+yarn.lock
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes

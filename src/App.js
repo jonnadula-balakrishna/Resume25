@@ -7,12 +7,13 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import "./styles/main.css";
+// import "./styles/main.css";
 import "./styles/global.css";
 
 function App() {
   return (
-     <>
+    <>
+      <title>Balakrishna Jonnadula - Full Stack Developer</title>
       <Navbar />
       <Home />
       <About />

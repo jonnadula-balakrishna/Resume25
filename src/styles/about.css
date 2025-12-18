@@ -1,0 +1,164 @@
+/* ================= ABOUT SECTION ================= */
+.about {
+    padding: 120px 90px;
+    background: var(--bg-dark);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 60px;
+    flex-wrap: wrap;
+    /* ensure responsiveness */
+}
+
+/* LEFT */
+.about-left {
+    max-width: 520px;
+}
+
+.about-left h3 {
+    font-size: 14px;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-left h2 span {
+    color: var(--color-primary);
+}
+
+.about-left p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--color-muted);
+    margin-bottom: 16px;
+}
+
+/* RIGHT */
+.about-right {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    gap: 20px;
+}
+
+/* Cards */
+.about-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+.about-card h4 {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+}
+
+.about-card p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Laptop (≤ 1200px) */
+@media (max-width: 1200px) {
+    .about {
+        padding: 100px 60px;
+    }
+
+    .about-left h2 {
+        font-size: 32px;
+    }
+
+}
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+    .about {
+        padding: 80px 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: start;
+        gap: 40px;
+    }
+
+    .about-left {
+        max-width: 100%;
+    }
+
+    .about-right {
+        grid-template-columns: repeat(2, 140px);
+        justify-content: start;
+    }
+}
+
+/* ================= MOBILE CARD MATCH (CONTACT STYLE) ================= */
+@media (max-width: 768px) {
+    .about-right {
+        width: 100%;
+        grid-template-columns: 1fr; /* full width */
+        gap: 18px;
+    }
+
+    .about-card {
+        padding: 26px;
+        border-radius: 18px;
+        text-align: left; /* same as contact card */
+    }
+
+    .about-card h4 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .about-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .about-left h2 {
+        font-size: 24px;
+    }
+
+    .about-left p {
+        font-size: 12px;
+    }
+
+    .about-right {
+        grid-template-columns: 1fr;
+        /* single column for cards */
+        gap: 14px;
+    }
+
+    .about-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .about-card p {
+        font-size: 15px;
+    }
+}

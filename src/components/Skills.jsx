@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/skills.css";
 
 const skillCategories = [
   {
@@ -56,6 +57,10 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         {/* HEADER */}
         <div className="skills-header">
           <h3>Skills</h3>
@@ -68,10 +73,14 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* CATEGORY GRID */}
+        {/* CONCAT CARD GRID */}
         <div className="skills-category-grid">
-          {skillCategories.map((category) => (
-            <div className="skills-category-card" key={category.title}>
+          {skillCategories.map((category, index) => (
+            <div
+              className={`skills-category-card ${index === 0 ? "first" : ""
+                } ${index === skillCategories.length - 1 ? "last" : ""}`}
+              key={category.title}
+            >
               <h4>{category.title}</h4>
 
               <div className="skills-list">
@@ -89,6 +98,10 @@ const Skills = () => {
             </div>
           ))}
         </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
       </div>
     </section>
   );

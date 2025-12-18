@@ -1,0 +1,250 @@
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 120px 90px;
+}
+
+/* ================= LEFT ================= */
+.hero-left {
+    max-width: 480px;
+}
+
+.hero-left h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    background: linear-gradient(135deg,
+            var(--color-text),
+            var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-left h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--color-primary);
+}
+
+.hero-left p {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-muted);
+}
+
+/* ================= BUTTON ================= */
+.primary-btn {
+    margin-top: 28px;
+    padding: 14px 26px;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= SCROLL ================= */
+.scroll {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+    font-size: 12px;
+    color: var(--color-primary);
+}
+
+.mouse {
+    width: 18px;
+    height: 28px;
+    border: 2px solid var(--color-primary);
+    border-radius: 14px;
+    position: relative;
+}
+
+.mouse::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    animation: scrollAnimation 2s infinite;
+}
+
+@keyframes scrollAnimation {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(8px);
+        opacity: 0.6;
+    }
+}
+
+/* ================= RIGHT ================= */
+.hero-right {
+    position: relative;
+    width: clamp(220px, 35vw, 420px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= BEAUTIFUL RESPONSIVE BLOB ================= */
+.blob {
+    position: absolute;
+    inset: 0;
+    background: var(--blob-gradient);
+
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+
+    filter: blur(clamp(18px, 5vw, 40px));
+    opacity: 0.85;
+
+    animation: blobMorph 10s ease-in-out infinite;
+    z-index: 1;
+}
+
+
+.dark-theme .blob {
+    opacity: 0.6;
+}
+
+/* ================= PROFILE IMAGE ================= */
+.profile {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+/* ================= BLOB ANIMATION ================= */
+@keyframes blobMorph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* ---------- Laptop (≤ 1200px) ---------- */
+@media (max-width: 1200px) {
+    .hero {
+        padding: 120px 60px 0;
+    }
+
+    .hero-left h1 {
+        font-size: 46px;
+    }
+}
+
+/* Tablet and Mobile: Reverse hero order, keep scroll */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 40px 60px;
+    }
+
+    /* Make hero-right appear first */
+    .hero-right {
+        order: -1;
+        margin-top: 0; /* remove extra margin */
+    }
+
+    .hero-left {
+        margin-top: 40px; /* spacing below hero-right */
+    }
+
+    /* Ensure scroll stays visible */
+    .scroll {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+}
+
+
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 110px 24px 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 34px;
+    }
+
+    .hero-left h2 {
+        font-size: 18px;
+    }
+
+    .hero-left p {
+        font-size: 13px;
+    }
+
+    .primary-btn {
+        padding: 12px 22px;
+        font-size: 13px;
+    }
+
+    .blob {
+        opacity: 0.75;
+        filter: blur(24px);
+    }
+
+    .profile {
+        width: 90%;
+    }
+    
+}
+
+/* ---------- Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 30px;
+    }
+
+    .blob {
+        filter: blur(18px);
+        opacity: 0.65;
+    }
+
+    .scroll {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+}
