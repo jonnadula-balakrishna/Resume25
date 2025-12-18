@@ -57,10 +57,6 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         {/* HEADER */}
         <div className="skills-header">
           <h3>Skills</h3>
@@ -98,10 +94,6 @@ const Skills = () => {
             </div>
           ))}
         </div>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
       </div>
     </section>
   );
